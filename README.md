@@ -33,7 +33,7 @@ Movie Chosen → Text Vectorization → Cosine Similarity Search → Top 5 Simil
 ## 🎥 Live Demo 
 
 
-👉 https://your-deployed-app-link
+👉 [Streamlit](https://movie-recommender-system-using-machine-learning-nwfuu9kcbyxiks.streamlit.app/)
 
 ---
 
