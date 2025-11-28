@@ -4,7 +4,7 @@ Email: ekorir99@gmail.com
 Date: 2025-Nov-28
 Updated by: Edwin Korir
 '''
-
+import gzip
 import pickle
 import streamlit as st
 import requests
@@ -57,15 +57,19 @@ def recommend(movie):
 st.set_page_config(layout="wide")
 st.header('Movie Recommender System Using Machine Learning')
 
-# Load the data files
+# Load compressed model files
 try:
-    movies_dict = pickle.load(open('artifacts/movie_dict.pkl', 'rb'))
+    with gzip.open('artifacts/movie_dict.pkl.gz', 'rb') as f:
+        movies_dict = pickle.load(f)
+
     movies = pd.DataFrame(movies_dict)
-    similarity = pickle.load(open('artifacts/similarity.pkl', 'rb'))
+
+    with gzip.open('artifacts/similarity.pkl.gz', 'rb') as f:
+        similarity = pickle.load(f)
+
 except FileNotFoundError:
     st.error("Model files not found. Please run the data processing notebook first.")
     st.stop()
-
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
