@@ -96,17 +96,17 @@ https://www.learndatasci.com/glossary/cosine-similarity/
 
 ```yaml
 Movie-Recommender-System-Using-Machine-Learning/
-│── app.py                     # Streamlit UI
-│── model.pkl                  # Cosine similarity matrix
-│── movies.pkl                 # Cleaned movie metadata
-│── requirements.txt
-│── demo/
-│   ├── 1.png
-│   ├── 2.png
-│   ├── 3.png
-│   └── 6.jpeg
-│── Movie Recommender System Data Analysis.ipynb
-└── README.md
+│
+├── artifacts/
+├── data/
+├── demo/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── .gitignore
+
 ```
 
 # ⚙️ Installation Guide
